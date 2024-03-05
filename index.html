@@ -9,19 +9,20 @@
 <body>
   <div class="wrapper">
     <h1>Login</h1>
+    <hr>
     <form action="" method="">
       <div class="input-data">
         <label for="username">Username</label>
-        <input type="text" name="username" id="username" minlength="3" maxlength="20" pattern="^[A-Za-z][A-Za-z0-9_\-]{2,19}$" required>
+        <input type="text" name="username" id="username" minlength="3" maxlength="200" pattern="^[A-Za-z][A-Za-z0-9_\-]{2,19}$" required>
       </div>
       <div class="input-data">
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" minlength="8" maxlength="20" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,20}$" required>
+        <input type="password" name="password" id="password" minlength="8" maxlength="200" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,20}$" required>
       </div>
-      <div class="remember-forget">
+      <div class="forgot-password">
         <a href="#">Forgot your password?</a>
       </div>
-      <input type="submit" value="Login">
+      <input type="submit" class="input-submit" value="Login">
       <div class="register-now">
         <label>
           Not a member?
