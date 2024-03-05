@@ -9,14 +9,14 @@
 <body>
   <div class="wrapper">
     <h1>Login</h1>
-    <form action="/" method="post">
+    <form action="" method="">
       <div class="input-data">
         <label for="username">Username</label>
-        <input type="text" name="username" id="username">
+        <input type="text" name="username" id="username" minlength="3" maxlength="20" pattern="^[A-Za-z][A-Za-z0-9_\-]{2,19}$" required>
       </div>
       <div class="input-data">
         <label for="password">Password</label>
-        <input type="password" name="password" id="password">
+        <input type="password" name="password" id="password" minlength="8" maxlength="20" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,20}$" required>
       </div>
       <div class="remember-forget">
         <a href="#">Forgot your password?</a>
