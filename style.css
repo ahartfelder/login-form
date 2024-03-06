@@ -9,22 +9,25 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgb(20, 0, 131);
+  background: url("photo.jpg") no-repeat center/cover;
 }
 
 .wrapper {
   padding: 20px;
   width: 80%;
   max-width: 460px;
-  background-color: purple;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
   color: aliceblue;
+  border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.5s ease;
 
   h1 {
     text-align: center;
     margin-bottom: 15px;
   }
-
 }
 
 .input-data {
@@ -40,25 +43,30 @@ body {
     font-size: 16px;
     width: 100%;
     height: 35px;
-    /* background-color: transparent; */
+    background-color: transparent;
+    color: rgba(240, 248, 255, 0.8);
     padding: 5px 15px;
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     outline: none;
+
+    &:focus-visible {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
   }
 }
 
 .forgot-password {
   margin: 10px;
-  font-size: 20px;
 
   a {
     color: aliceblue;
+    
+    &:not(:hover) {
+      text-decoration: none;
+    }
   }
   
-  a:not(:hover) {
-    text-decoration: none;
-  }
 }
 
 .input-submit {
@@ -68,12 +76,26 @@ body {
   border: none;
   border-radius: 15px;
   outline: none;
-  color: rgb(68, 68, 68);
+  background-color: rgb(230, 230, 230);
+  color: rgb(110, 110, 110);
   font-size: 16px;
+  font-weight: 600;
 
   &:hover {
-    background-color: rgb(227, 242, 255);
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0 0 5px rgba(250, 250, 250, 0.4);
+  }
+}
+
+.register-now {
+  margin: 10px;
+
+  a {
+    color: aliceblue;
     font-weight: 600;
+
+    &:not(:hover) {
+      text-decoration: none;
+    }
   }
 }
