@@ -5,24 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Form</title>
   <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <div class="left">
+    <h1>Teste</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum veritatis incidunt beatae quasi exercitationem est impedit iste amet esse. Saepe a eius deserunt praesentium harum, quidem in, rerum vitae dolores sit minima itaque accusantium optio aliquid molestiae eveniet inventore natus. Delectus animi consectetur, odit at pariatur nulla officia eligendi sed neque non adipisci suscipit molestiae! Dolorem minima nesciunt deserunt nisi hic odio optio, modi maxime mollitia amet tempore aliquid blanditiis nulla voluptatem officiis. Accusamus minima magni aut porro magnam quo, eveniet enim distinctio alias fugiat? Reiciendis, placeat. Doloremque odit asperiores harum eos nam mollitia libero, eius ut? Eveniet perferendis reiciendis cumque autem nam quos ab optio rerum vero deleniti minima nobis, id architecto itaque doloribus qui dicta! Qui, blanditiis, delectus id voluptatibus omnis molestiae nemo necessitatibus similique temporibus labore, aliquid corporis? Odit, quod consectetur? Tenetur voluptas ut pariatur optio labore vitae, alias eligendi dolorum non, quas temporibus odio aut voluptatibus maiores similique dignissimos illo!</p>
+  </div>
   <div class="wrapper">
     <h1>Login</h1>
     <hr>
-    <form action="" method="">
+    <form id="login-form" action="/" novalidate>
       <div class="input-data">
         <label for="username">Username</label>
-        <input type="text" name="username" id="username" minlength="3" maxlength="200" pattern="^[A-Za-z][A-Za-z0-9_\-]{2,19}$" required>
+        <div class="input-container">
+          <input type="text" name="username" id="username" placeholder="Username" required>
+          <i class='bx bxs-user'></i>
+        </div>
+        <div class="error"></div>
       </div>
       <div class="input-data">
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" minlength="8" maxlength="200" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,20}$" required>
+        <div class="input-container">
+          <input type="password" name="password" id="password" placeholder="Password" required>
+          <i class='bx bxs-lock-alt'></i>
+        </div>
+        <div class="error"></div>
       </div>
       <div class="forgot-password">
         <a href="#">Forgot your password?</a>
       </div>
-      <input type="submit" class="input-submit" value="Login">
+      <button type="submit" class="input-submit">Login</button>
       <div class="register-now">
         <label>
           Not a member?
