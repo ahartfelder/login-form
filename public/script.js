@@ -76,3 +76,17 @@ const validateInputs = () => {
     }
   }
 };
+
+function togglePassword() {
+  const toggleIcon = document.querySelector(".reveal-password");
+
+  password.type = password.type === "password" ? "text" : "password";
+
+  if (password.type === "password") {
+    toggleIcon.classList.remove("bx-hide");
+    toggleIcon.classList.add("bx-show");
+  } else {
+    toggleIcon.classList.remove("bx-show");
+    toggleIcon.classList.add("bx-hide");
+  }
+}

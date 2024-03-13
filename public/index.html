@@ -20,16 +20,17 @@
       <div class="input-data">
         <label for="username">Username</label>
         <div class="input-container">
-          <input type="text" name="username" id="username" placeholder="Username" required>
-          <i class='bx bxs-user'></i>
+          <input type="text" name="username" id="username" placeholder="Type your username" required>
+          <i class=' icon bx bxs-user'></i>
         </div>
         <div class="error"></div>
       </div>
       <div class="input-data">
         <label for="password">Password</label>
         <div class="input-container">
-          <input type="password" name="password" id="password" placeholder="Password" required>
-          <i class='bx bxs-lock-alt'></i>
+          <input type="password" name="password" id="password" placeholder="Type your password" required>
+          <i class="icon bx bxs-lock-alt"></i>
+          <i class="bx bx-show reveal-password" onclick="togglePassword()"></i>
         </div>
         <div class="error"></div>
       </div>

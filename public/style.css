@@ -13,7 +13,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   min-height: calc(100vh - 80px);
-  background: url("photo.jpg") no-repeat fixed center/cover;
+  background: url("images/photo.jpg") no-repeat fixed center/cover;
   color: aliceblue;
 }
 
@@ -72,10 +72,14 @@ body {
       width: 100%;
       background-color: transparent;
       color: rgba(240, 248, 255, 0.8);
-      padding: 5px 35px 5px 15px;
+      padding: 5px 10px 5px 35px;
       border: 2px solid rgba(255, 255, 255, 0.2);
       border-radius: 15px;
       outline: none;
+
+      &#password {
+        padding: 5px 35px;
+      } 
   
       &:focus-visible {
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
@@ -85,14 +89,29 @@ body {
       &::placeholder {
         color: rgba(240, 248, 255, 0.4);
       }
+
+      &:autofill {
+        -webkit-text-fill-color: aliceblue;
+        background-clip: text;
+      }
     }
 
-    i {
+    .icon, .reveal-password {
       position: absolute;
       top: 50%;
-      right: 15px;
       transform: translateY(-50%);
       font-size: 20px;
+      color: aliceblue;
+    }
+    
+    .icon {
+      left: 10px;
+    }
+
+    .reveal-password {
+      line-height:20px;
+      right: 10px;
+      cursor: pointer;
     }
   }
   
