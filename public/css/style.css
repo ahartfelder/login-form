@@ -13,7 +13,7 @@ body {
   color: aliceblue;
 }
 
-/* CUSTOM ALERT */
+/* CUSTOM MODAL */
 .custom-alert {
   display: none;
   position: fixed;
