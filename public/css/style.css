@@ -35,17 +35,21 @@ body {
   font-weight: 500;
   color: black;
   background-color: #fff;
-  padding: 20px;
+  padding: 50px;
   border-radius: 5px;
 }
 
 .custom-alert button {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #007bffd3;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  &:hover {
+    background-color: #007bff;
+  }
 }
 /* CUSTOM ALERT - END */

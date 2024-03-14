@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  min-height: 100vh;
 }
 
 .left, .wrapper {
@@ -64,6 +65,7 @@
       border: 2px solid rgba(255, 255, 255, 0.2);
       border-radius: 15px;
       outline: none;
+      font-size: 14px;
 
       &#password {
         padding: 5px 35px;

@@ -2,19 +2,8 @@ const form = document.getElementById("login-form");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 
-function showAlert(message) {
-  document.getElementById("custom-alert-message").textContent =
-    message || "For test purposes only!";
-  document.getElementById("custom-alert").style.display = "block";
-}
-
-function closeCustomAlert() {
-  document.getElementById("custom-alert").style.display = "none";
-}
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-
   validateInputs();
 });
 
@@ -37,7 +26,7 @@ const setSuccess = (element) => {
   inputControl.classList.remove("error");
 };
 
-const validateInputs = () => {
+function validateInputs() {
   const usernameValue = username.value.trim();
   const passwordValue = password.value.trim();
 
@@ -85,7 +74,7 @@ const validateInputs = () => {
       setSuccess(password);
     }
   }
-};
+}
 
 function togglePassword() {
   const toggleIcon = document.querySelector(".reveal-password");
