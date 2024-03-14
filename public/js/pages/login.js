@@ -7,48 +7,38 @@ form.addEventListener("submit", (e) => {
   validateInputs();
 });
 
-const setError = (element, message) => {
+function setStatus(element, message = "") {
   const inputControl = element.closest(".input-data");
   const errorDisplay = inputControl.querySelector(".error");
 
   errorDisplay.innerText = message;
-  inputControl.classList.add("error");
-  inputControl.classList.remove("success");
-};
-
-const setSuccess = (element) => {
-  const inputControl = element.closest(".input-data");
-  console.log(inputControl);
-  const errorDisplay = inputControl.querySelector(".error");
-
-  errorDisplay.innerText = "";
-  inputControl.classList.add("success");
-  inputControl.classList.remove("error");
-};
+  inputControl.classList.toggle("error", message);
+  inputControl.classList.toggle("success", !message);
+}
 
 function validateInputs() {
   const usernameValue = username.value.trim();
   const passwordValue = password.value.trim();
 
   if (usernameValue === "") {
-    setError(username, "Username is required");
+    setStatus(username, "Username is required");
   } else if (!/^[A-Za-z]/.test(usernameValue)) {
-    setError(username, "Username must start with letters");
+    setStatus(username, "Username must start with letters");
   } else if (usernameValue.length < 3 || usernameValue.length > 20) {
-    setError(username, "Username must be between 3 and 20 characters");
+    setStatus(username, "Username must be between 3 and 20 characters");
   } else if (!/^[A-Za-z0-9_-]*$/.test(usernameValue)) {
-    setError(
+    setStatus(
       username,
       "Username can only contain letters, numbers, hyphens, or underscores"
     );
   } else {
-    setSuccess(username);
+    setStatus(username);
   }
 
   if (passwordValue === "") {
-    setError(password, "Password is required");
+    setStatus(password, "Password is required");
   } else if (passwordValue.length < 8 || passwordValue.length > 20) {
-    setError(password, "Password must be between 8 and 20 characters");
+    setStatus(password, "Password must be between 8 and 20 characters");
   } else {
     let errorMessages = [];
 
@@ -69,23 +59,19 @@ function validateInputs() {
     }
 
     if (errorMessages.length > 0) {
-      setError(password, `Password must contain ${errorMessages.join(", ")}`);
+      setStatus(password, `Password must contain ${errorMessages.join(", ")}`);
     } else {
-      setSuccess(password);
+      setStatus(password);
     }
   }
 }
 
 function togglePassword() {
   const toggleIcon = document.querySelector(".reveal-password");
+  const isVisible = password.type === "password" ? true : false;
 
-  password.type = password.type === "password" ? "text" : "password";
+  password.type = isVisible ? "text" : "password";
 
-  if (password.type === "password") {
-    toggleIcon.classList.remove("bx-hide");
-    toggleIcon.classList.add("bx-show");
-  } else {
-    toggleIcon.classList.remove("bx-show");
-    toggleIcon.classList.add("bx-hide");
-  }
+  toggleIcon.classList.toggle("bx-hide", !isVisible);
+  toggleIcon.classList.toggle("bx-show", isVisible);
 }
