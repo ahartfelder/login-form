@@ -1,43 +1,47 @@
 <%- contentFor("head") %>
   <title><%= title %></title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/login.css">
   <script src="/js/script.js" defer></script>
 
 <% contentFor("body") %>
-  <div class="left">
-    <h1>Teste</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum veritatis incidunt beatae quasi exercitationem est impedit iste amet esse. Saepe a eius deserunt praesentium harum, quidem in, rerum vitae dolores sit minima itaque accusantium optio aliquid molestiae eveniet inventore natus. Delectus animi consectetur, odit at pariatur nulla officia eligendi sed neque non adipisci suscipit molestiae! Dolorem minima nesciunt deserunt nisi hic odio optio, modi maxime mollitia amet tempore aliquid blanditiis nulla voluptatem officiis. Accusamus minima magni aut porro magnam quo, eveniet enim distinctio alias fugiat? Reiciendis, placeat. Doloremque odit asperiores harum eos nam mollitia libero, eius ut? Eveniet perferendis reiciendis cumque autem nam quos ab optio rerum vero deleniti minima nobis, id architecto itaque doloribus qui dicta! Qui, blanditiis, delectus id voluptatibus omnis molestiae nemo necessitatibus similique temporibus labore, aliquid corporis? Odit, quod consectetur? Tenetur voluptas ut pariatur optio labore vitae, alias eligendi dolorum non, quas temporibus odio aut voluptatibus maiores similique dignissimos illo!</p>
-  </div>
-  <div class="wrapper">
-    <h1>Login</h1>
-    <hr>
-    <form id="login-form" action="/" novalidate>
-      <div class="input-data">
-        <label for="username">Username</label>
-        <div class="input-container">
-          <input type="text" name="username" id="username" placeholder="Type your username" required>
-          <i class=' icon bx bxs-user'></i>
+  <div class="main">
+    <div class="left">
+      <h1>Teste</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum veritatis incidunt beatae quasi exercitationem est impedit iste amet esse. Saepe a eius deserunt praesentium harum, quidem in, rerum vitae dolores sit minima itaque accusantium optio aliquid molestiae eveniet inventore natus. Delectus animi consectetur, odit at pariatur nulla officia eligendi sed neque non adipisci suscipit molestiae! Dolorem minima nesciunt deserunt nisi hic odio optio, modi maxime mollitia amet tempore aliquid blanditiis nulla voluptatem officiis. Accusamus minima magni aut porro magnam quo, eveniet enim distinctio alias fugiat? Reiciendis, placeat. Doloremque odit asperiores harum eos nam mollitia libero, eius ut? Eveniet perferendis reiciendis cumque autem nam quos ab optio rerum vero deleniti minima nobis, id architecto itaque doloribus qui dicta! Qui, blanditiis, delectus id voluptatibus omnis molestiae nemo necessitatibus similique temporibus labore, aliquid corporis? Odit, quod consectetur? Tenetur voluptas ut pariatur optio labore vitae, alias eligendi dolorum non, quas temporibus odio aut voluptatibus maiores similique dignissimos illo!</p>
+    </div>
+    <div class="wrapper">
+      <h1>Login</h1>
+      <hr>
+      <form id="login-form" action="/" novalidate>
+        <div class="input-data">
+          <label for="username">Username</label>
+          <div class="input-container">
+            <input type="text" name="username" id="username" placeholder="Type your username" required>
+            <i class=' icon bx bxs-user'></i>
+          </div>
+          <div class="error"></div>
         </div>
-        <div class="error"></div>
-      </div>
-      <div class="input-data">
-        <label for="password">Password</label>
-        <div class="input-container">
-          <input type="password" name="password" id="password" placeholder="Type your password" required>
-          <i class="icon bx bxs-lock-alt"></i>
-          <i class="bx bx-show reveal-password" onclick="togglePassword()"></i>
+        <div class="input-data">
+          <label for="password">Password</label>
+          <div class="input-container">
+            <input type="password" name="password" id="password" placeholder="Type your password" required>
+            <i class="icon bx bxs-lock-alt"></i>
+            <i class="bx bx-show reveal-password" onclick="togglePassword()"></i>
+          </div>
+          <div class="error"></div>
         </div>
-        <div class="error"></div>
-      </div>
-      <div class="forgot-password">
-        <a href="#">Forgot your password?</a>
-      </div>
-      <button type="submit" class="input-submit">Login</button>
-      <div class="register-now">
-        <label>
-          Not a member?
-          <a href="#">Register Now!</a>
-        </label>
-      </div>
-    </form>
+        <div class="forgot-password">
+          <a href="#" onclick="showAlert()">Forgot your password?</a>
+        </div>
+        <button type="submit" class="input-submit">Login</button>
+        <div class="register-now">
+          <label>
+            Not a member?
+            <a href="#" onclick="showAlert()">Register Now!</a>
+          </label>
+        </div>
+      </form>
+    </div>
   </div>
+
+  <%- include("../partials/alert") %>

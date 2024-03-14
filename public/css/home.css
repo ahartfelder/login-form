@@ -1,0 +1,17 @@
+.main {
+  margin: 20px;
+
+  h1 {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
