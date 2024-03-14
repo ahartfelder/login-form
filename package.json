@@ -1,17 +1,19 @@
 {
   "name": "login-form",
   "version": "1.0.0",
-  "description": "This is an example of login form using HTML and CSS.",
-  "main": "src/app.js",
+  "description": "This is an example of login form using HTML, CSS and JS with ExpressJS.",
+  "main": "app.js",
   "scripts": {
-    "start": "node app",
-    "dev": "nodemon app"
+    "start": "node src/app",
+    "dev": "nodemon src/app"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.3"
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-ejs-layouts": "^2.5.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
